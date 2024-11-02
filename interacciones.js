@@ -14,3 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     galeria.cycle();
   }
 
+// INTERACCION IMAGEN EN ABOUT ME
+
+const aboutImage = document.getElementById('change-img');
+        const originalSrc = aboutImage.src;
+        const newSrc = 'img/aboutme02.jpg'; // Cambia esto por la URL de tu nueva imagen
+
+        aboutImage.addEventListener('click', function() {
+            aboutImage.src = (aboutImage.src === originalSrc) ? newSrc : originalSrc;
+        });
