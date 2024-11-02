@@ -1,43 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACTO</title>
+    <title>TIO VALEN Y SINDICATO DE LA LOCURA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Coming+Soon&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Coming+Soon&family=Itim&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
 </head>
-<body> 
+<body class="d-flex flex-column vh-100 overflow-hidden"> 
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html"><img src="./img/logo.png" alt="logo" width="60em"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3"> 
-                  <li class="nav-item"><a class="nav-link" href="ultimamente.html">ULTIMAMENTE</a></li>
-                  <li class="nav-item"> <a class="nav-link active" aria-current="page" href="banda.html">BANDA</a></li>
-                  <li class="nav-item"><a class="nav-link" href="musica.html">MUSICA</a></li>                  
-                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="media.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">MEDIA</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="fotografia.html">FOTOGRAFIA</a></li>
-                    <li><a class="dropdown-item" href="video.html">VIDEOS</a></li>
-                  </ul>
-                </li>
-                  <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTARSE</a></li>
-                  <li class="nav-item"><a class="nav-link" href="aboutus.html">ABOUT US</a></li>
-                </ul>
-              </div>
+        <div class="container-fluid gx-0">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html"><img src="./img/logo.png" alt="logo" width="60em"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3"> 
+                      <li class="nav-item"><a class="nav-link" href="ultimamente.html">ULTIMAMENTE</a></li>
+                      <li class="nav-item"> <a class="nav-link active" aria-current="page" href="banda.html">BANDA</a></li>
+                      <li class="nav-item"><a class="nav-link" href="musica.html">MUSICA</a></li>        
+                        <li class="nav-item dropdown">
+                          <!-- Enlace principal a media.html -->
+                           <a class="nav-link dropdown-toggle" href="media.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">MEDIA</a>
+                          <!-- Menú desplegable para subsecciones -->
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="fotografia.html">FOTOGRAFIA</a></li>
+                              <li><a class="dropdown-item" href="video.html">VIDEOS</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTARSE</a></li>
+                      <li class="nav-item"><a class="nav-link" href="aboutus.html">ABOUT US</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>   
+    <main class="container-fluid flex-grow-1 mt-3">
+      
+      <h2 class="text-center">FORMULARIO DE CONTACTO</h2>
+        <form id="contactForm" class="p-4 border rounded">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="tuemail@ejemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+        <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+          ¡Tu mensaje ha sido enviado exitosamente!
+        </div>
+        <div id="errorMessage" class="alert alert-danger mt-3 d-none" role="alert">
+          Ocurrió un error al enviar tu mensaje. Inténtalo nuevamente.
+        </div>
+      </div>
+     
+    </main>
+   
+    <footer class="bg-light text-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Título a la izquierda -->
+            <h3 class="text-success mb-0 ">EL TIO VALEN Y EL SINDICATO DE LA LOCURA</h3>
+            
+            <!-- Íconos de redes sociales a la derecha -->
+            <div>
+                <a href="https://www.facebook.com/el.tio.valen" target="_blank" class="text-success me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/el.tio.valen/" target="_blank" class="text-success me-3"><i class="fab fa-instagram"></i></a>
+                <a href="https://open.spotify.com/intl-es/artist/6wmJ0G1rcbo6NkDqFy7is8?si=PTRkYMnRTE2JetK2xusYXA" target="_blank" class="text-success me-3"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/channel/UCPIDHu7fnP7pT_QCE6zxD5A" target="_blank" class="text-success me-3"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/eltiovalen" target="_blank" class="text-success me-3"><i class="fab fa-twitter"></i></a>
+
+
+                <!-- Agrega más enlaces aquí según sea necesario -->
             </div>
-          </nav>
-      </header>
-</body>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/interacciones.js"> </script>
+
 </body>
 </html>

@@ -1,1 +1,0 @@
-# INFORMATICA-TP-2
